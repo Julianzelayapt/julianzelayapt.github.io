@@ -44,10 +44,10 @@ const App: React.FC = () => {
                   <div className="bg-white p-6 md:p-8 rounded-[40px] ios-shadow border border-black/[0.01] hover-zoom">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="aspect-[3/4] rounded-[24px] overflow-hidden bg-kaki-100">
-                        <img src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768689594/IMG_4813_llnovp.jpg" className="w-full h-full object-cover grayscale" alt="Asesorado 2 Before" />
+                        <img src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768703744/ari_antes_e9j80j.jpg" className="w-full h-full object-cover grayscale" alt="Asesorado 2 Before" />
                       </div>
                       <div className="aspect-[3/4] rounded-[24px] overflow-hidden bg-kaki-100 border-2 border-kaki-200">
-                        <img src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768687270/IMG_4234_imsnie.jpg" className="w-full h-full object-cover" alt="Asesorado 2 After" />
+                        <img src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768703750/ari_despues_wkazfa.jpg" className="w-full h-full object-cover" alt="Asesorado 2 After" />
                       </div>
                     </div>
                   </div>

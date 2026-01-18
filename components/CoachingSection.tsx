@@ -51,7 +51,7 @@ const CoachingSection: React.FC<{ t: any }> = ({ t }) => {
               <div className="relative group">
                 <div className="bg-kaki-100 p-3 rounded-[40px] ios-shadow border-4 border-white transition-all duration-700">
                   <img 
-                    src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768687272/d_2_vqnv5v.png" 
+                    src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768702107/c60c0612-a726-4341-ac6c-a27fffcb6127_y5n6vh.jpg" 
                     alt="Coaching Julian" 
                     className="rounded-[30px] w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
                   />
