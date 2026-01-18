@@ -1,8 +1,14 @@
 
 import React from 'react';
 
-const PlanCard = ({ plan, t }: { plan: any; t: any }) => (
-  <div className="relative flex flex-col p-10 rounded-[32px] border border-black/[0.02] overflow-hidden group hover-zoom h-[400px] shadow-lg">
+// Fix: Define PlanCard as a React.FC to allow standard React props like 'key' and avoid type errors during array mapping.
+interface PlanCardProps {
+  plan: any;
+  t: any;
+}
+
+const PlanCard: React.FC<PlanCardProps> = ({ plan, t }) => (
+  <div className="relative flex flex-col p-8 rounded-[32px] border border-black/[0.02] overflow-hidden group hover-zoom h-[400px] shadow-lg">
     {/* Background Image Overlay */}
     <div className="absolute inset-0 z-0">
       <img src={plan.image} alt={plan.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -66,14 +72,14 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
   ];
 
   return (
-    <section id="plans" className="py-16 px-6 bg-white overflow-hidden">
+    <section id="plans" className="py-12 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 animate-slide">
+        <div className="text-center mb-12 animate-slide">
           <h2 className="text-4xl md:text-7xl font-black text-ios-text mb-4 tracking-tighter uppercase leading-none">{t.plans_title}</h2>
         </div>
 
-        <div className="mb-16">
-          <div className="flex items-center gap-4 mb-10 animate-slide">
+        <div className="mb-12">
+          <div className="flex items-center gap-4 mb-8 animate-slide">
             <div className="h-px flex-grow bg-black/5"></div>
             <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-kaki-500">{t.gymbro}</h3>
             <div className="h-px flex-grow bg-black/5"></div>
@@ -84,7 +90,7 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
         </div>
 
         <div>
-          <div className="flex items-center gap-4 mb-10 animate-slide">
+          <div className="flex items-center gap-4 mb-8 animate-slide">
             <div className="h-px flex-grow bg-black/5"></div>
             <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-kaki-500">{t.gymgirl}</h3>
             <div className="h-px flex-grow bg-black/5"></div>

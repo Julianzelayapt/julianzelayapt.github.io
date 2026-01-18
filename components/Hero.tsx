@@ -2,24 +2,40 @@
 import React from 'react';
 
 const Hero: React.FC<{ t: any }> = ({ t }) => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="hero" className="relative pt-32 pb-12 md:pt-40 md:pb-16 px-6 bg-white overflow-hidden">
+    <section id="hero" className="relative pt-24 pb-8 md:pt-32 md:pb-12 px-6 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           <div className="flex-1 text-center lg:text-left z-10 animate-slide">
-            <h1 className="text-4xl md:text-7xl font-black leading-[0.95] text-ios-text mb-8 tracking-tighter uppercase">
+            <h1 className="text-4xl md:text-7xl font-black leading-[0.95] text-ios-text mb-6 tracking-tighter uppercase">
               {t.hero_title}
             </h1>
-            <p className="text-lg md:text-xl text-ios-gray mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+            <p className="text-lg md:text-xl text-ios-gray mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
               {t.hero_desc}
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
-              <button className="w-full sm:w-auto bg-ios-text text-white px-10 py-5 rounded-ios font-black text-[10px] uppercase tracking-[0.2em] hover:bg-kaki-800 transition-all shadow-xl hover-zoom">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a 
+                href="#coaching" 
+                onClick={(e) => handleScroll(e, 'coaching')}
+                className="w-full sm:w-auto bg-ios-text text-white px-10 py-5 rounded-ios font-black text-[10px] uppercase tracking-[0.2em] text-center hover:bg-kaki-800 transition-all shadow-xl hover-zoom"
+              >
                 {t.hero_btn_1}
-              </button>
-              <button className="w-full sm:w-auto px-10 py-5 rounded-ios font-black text-[10px] uppercase tracking-[0.2em] text-ios-text bg-kaki-50 border border-black/[0.05] hover:bg-kaki-100 transition-all hover-zoom">
+              </a>
+              <a 
+                href="#plans" 
+                onClick={(e) => handleScroll(e, 'plans')}
+                className="w-full sm:w-auto px-10 py-5 rounded-ios font-black text-[10px] uppercase tracking-[0.2em] text-ios-text bg-kaki-50 border border-black/[0.05] text-center hover:bg-kaki-100 transition-all hover-zoom"
+              >
                 {t.hero_btn_2}
-              </button>
+              </a>
             </div>
           </div>
           

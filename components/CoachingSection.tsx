@@ -5,18 +5,18 @@ const CoachingSection: React.FC<{ t: any }> = ({ t }) => {
   const wspLink = "https://wa.me/393515122826";
 
   return (
-    <section id="coaching" className="py-16 px-6 bg-kaki-50 overflow-hidden">
+    <section id="coaching" className="pt-0 pb-12 md:pt-0 md:pb-16 px-6 bg-kaki-50 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="bg-white rounded-[48px] p-8 md:p-16 relative ios-shadow border border-black/[0.02]">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="bg-white rounded-[48px] p-8 md:p-14 relative ios-shadow border border-black/[0.02]">
+          <div className="flex flex-col lg:flex-row items-center gap-10">
             <div className="flex-1 animate-slide">
-              <span className="text-kaki-500 font-black text-[9px] uppercase tracking-[0.4em] mb-6 block">Premium Mentorship</span>
-              <h2 className="text-4xl md:text-6xl font-black text-ios-text mb-8 leading-[0.9] uppercase tracking-tighter">{t.coaching_title}</h2>
-              <p className="text-xl text-ios-gray mb-10 leading-relaxed font-medium">
+              <span className="text-kaki-500 font-black text-[9px] uppercase tracking-[0.4em] mb-4 block">Premium Mentorship</span>
+              <h2 className="text-4xl md:text-6xl font-black text-ios-text mb-6 leading-[0.9] uppercase tracking-tighter">{t.coaching_title}</h2>
+              <p className="text-xl text-ios-gray mb-8 leading-relaxed font-medium">
                 {t.coaching_desc}
               </p>
               
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
                 {/* Basic Pack */}
                 <div className="p-8 rounded-[32px] bg-kaki-50 border border-black/[0.02] hover-zoom">
                    <h3 className="text-xl font-black uppercase mb-4 tracking-tighter">{t.pack_basic}</h3>
