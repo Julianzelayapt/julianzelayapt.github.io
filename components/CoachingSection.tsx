@@ -52,7 +52,7 @@ const CoachingSection: React.FC<{ t: any }> = ({ t }) => {
                 <div className="bg-kaki-100 p-2 rounded-[32px] ios-shadow border-2 border-white transition-all duration-700">
                   <img 
                     src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768702107/c60c0612-a726-4341-ac6c-a27fffcb6127_y5n6vh.jpg" 
-                    alt="Coaching con Julián" 
+                    alt="Asesoría 1 a 1 con Julián" 
                     className="rounded-[24px] w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>

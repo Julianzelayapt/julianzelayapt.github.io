@@ -5,7 +5,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      window.scrollTo({ top: element.offsetTop - 60, behavior: 'smooth' });
+      window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
     }
   };
 
@@ -14,7 +14,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           <div className="flex-1 text-center lg:text-left z-10 animate-from-left">
-            <h1 className="text-4xl md:text-6xl font-black leading-[0.95] text-ios-text mb-10 tracking-tighter uppercase">
+            <h1 className="text-4xl md:text-6xl font-black leading-[0.95] text-ios-text mb-12 tracking-tighter uppercase">
               {t.hero_title}
             </h1>
             

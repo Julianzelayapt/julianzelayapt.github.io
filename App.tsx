@@ -12,6 +12,13 @@ const App: React.FC = () => {
   const [lang, setLang] = useState<'es' | 'en' | 'it'>('es');
   const t = translations[lang];
 
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white selection:bg-kaki-100 selection:text-ios-text">
       <Navbar lang={lang} setLang={setLang} t={t} />
@@ -40,14 +47,14 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Asesorado 2 - Actualizado con links de Ari */}
+              {/* Asesorado 2 - Ari - Actualizado con links de Cloudinary */}
               <div className="bg-white p-4 md:p-6 rounded-[40px] ios-shadow border border-black/[0.01] hover-zoom animate-from-right">
                 <div className="grid grid-cols-2 gap-3">
                   <div className="aspect-[3/4] rounded-[24px] overflow-hidden bg-kaki-100">
-                    <img src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768703744/ari_antes_e9j80j.jpg" className="w-full h-full object-cover grayscale" alt="Asesorado 2 Antes" />
+                    <img src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768703744/ari_antes_e9j80j.jpg" className="w-full h-full object-cover grayscale" alt="Ari Antes" />
                   </div>
                   <div className="aspect-[3/4] rounded-[24px] overflow-hidden bg-kaki-100 border-2 border-kaki-200">
-                    <img src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768703750/ari_despues_wkazfa.jpg" className="w-full h-full object-cover" alt="Asesorado 2 Después" />
+                    <img src="https://res.cloudinary.com/deb7eunq3/image/upload/v1768703750/ari_despues_wkazfa.jpg" className="w-full h-full object-cover" alt="Ari Después" />
                   </div>
                 </div>
               </div>
@@ -63,9 +70,14 @@ const App: React.FC = () => {
           <div className="max-w-4xl mx-auto animate-fade-up">
             <span className="text-kaki-500 font-black text-[9px] uppercase tracking-[0.5em] mb-6 block">Training Logic</span>
             <h2 className="text-4xl md:text-6xl font-black mb-8 leading-[0.9] tracking-tighter uppercase">{t.cta_title}</h2>
-            <button className="bg-white text-ios-text px-14 py-5 rounded-ios font-black text-[10px] uppercase tracking-[0.3em] hover:bg-kaki-50 transition-all shadow-2xl hover-zoom">
+            <a 
+              href="https://wa.me/393515122826"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-ios-text px-14 py-5 rounded-ios font-black text-[10px] uppercase tracking-[0.3em] hover:bg-kaki-50 transition-all shadow-2xl hover-zoom"
+            >
               {t.cta_btn}
-            </button>
+            </a>
           </div>
         </section>
       </main>
