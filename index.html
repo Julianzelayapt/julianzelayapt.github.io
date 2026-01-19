@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="es" style="scroll-behavior: smooth;">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,6 @@
           extend: {
             colors: {
               kaki: {
-                // Kaki ligero tirando a azul (Sage/Slate suave)
                 50: '#f8faf9',
                 100: '#eff2f1',
                 200: '#e1e7e6',
@@ -57,24 +56,47 @@
         .ios-shadow {
             box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
-        /* Animación de desplazamiento izquierda a derecha */
-        @keyframes slideInLeft {
-          from { opacity: 0; transform: translateX(-40px); }
-          to { opacity: 1; transform: translateX(0); }
+        
+        /* Slide Animations */
+        @keyframes slideInFromLeft {
+          0% { opacity: 0; transform: translateX(-60px); }
+          100% { opacity: 1; transform: translateX(0); }
         }
-        .animate-slide {
-          animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        @keyframes slideInFromRight {
+          0% { opacity: 0; transform: translateX(60px); }
+          100% { opacity: 1; transform: translateX(0); }
         }
-        /* Zoom en hover para planes y botones */
+        @keyframes fadeInUp {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-from-left { animation: slideInFromLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-from-right { animation: slideInFromRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-fade-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
         .hover-zoom {
           transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .hover-zoom:hover {
-          transform: scale(1.05);
+          transform: scale(1.04);
         }
+        
         .delay-1 { animation-delay: 0.1s; }
         .delay-2 { animation-delay: 0.2s; }
         .delay-3 { animation-delay: 0.3s; }
+        
+        /* Ensure no extra whitespace */
+        section {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        @media (min-width: 768px) {
+            section {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
     </style>
 <script type="importmap">
 {
@@ -88,6 +110,5 @@
 </head>
 <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
 </body>
 </html>

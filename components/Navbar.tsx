@@ -20,15 +20,15 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t }) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
+      window.scrollTo({ top: element.offsetTop - 60, behavior: 'smooth' });
       setIsOpen(false);
     }
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-2' : 'py-4'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-1' : 'py-2'}`}>
       <div className="max-w-6xl mx-auto px-6">
-        <div className={`ios-blur bg-white/80 rounded-full border border-black/[0.03] px-8 flex items-center justify-between transition-all duration-300 ${scrolled ? 'ios-shadow py-3' : 'py-4'}`}>
+        <div className={`ios-blur bg-white/80 rounded-full border border-black/[0.03] px-8 flex items-center justify-between transition-all duration-300 ${scrolled ? 'ios-shadow py-2' : 'py-3'}`}>
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => scrollTo('hero')}>
             <div className="w-8 h-8 bg-ios-text rounded-full flex items-center justify-center text-white font-black text-[9px]">JZ</div>
             <span className="text-[11px] font-black tracking-[0.2em] text-ios-text uppercase">JULIAN ZELAYA PT</span>
@@ -63,7 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t }) => {
       </div>
       
       {isOpen && (
-        <div className="md:hidden mx-6 mt-4 ios-blur bg-white/95 rounded-ios-lg border border-black/[0.05] p-8 space-y-6 ios-shadow animate-in fade-in slide-in-from-top-4">
+        <div className="md:hidden mx-6 mt-2 ios-blur bg-white/95 rounded-ios-lg border border-black/[0.05] p-6 space-y-4 ios-shadow animate-in fade-in slide-in-from-top-4">
           <button onClick={() => scrollTo('knowledge')} className="block w-full text-left text-xs font-black uppercase tracking-widest">{t.nav_method}</button>
           <button onClick={() => scrollTo('coaching')} className="block w-full text-left text-xs font-black uppercase tracking-widest">{t.nav_coaching}</button>
           <button onClick={() => scrollTo('plans')} className="block w-full text-left text-xs font-black uppercase tracking-widest">{t.nav_plans}</button>
